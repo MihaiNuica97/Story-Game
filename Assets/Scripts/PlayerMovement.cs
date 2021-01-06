@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     CharacterController controller;
     public float speed = 12f;
-    public GameObject orientation;
+    public GameObject movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = orientation.transform.forward * z + orientation.transform.right * x;
+        Vector3 move = movement.transform.forward * z + movement.transform.right * x;
 
         controller.Move(move * speed * Time.deltaTime);
     }
