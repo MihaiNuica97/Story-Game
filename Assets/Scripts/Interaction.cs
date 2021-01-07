@@ -33,6 +33,7 @@ public class Interaction : MonoBehaviour
         if (interactingObject != null && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Interacted with: " + interactingObject.name);
+            interactingObject.SendMessage("Interact");
         }
     }
     private void FixedUpdate()

@@ -6,6 +6,7 @@ public class InteractableObjectPrompt : MonoBehaviour
 {
     Interaction playerScript;
     Transform prompt;
+    public bool visible = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,12 @@ public class InteractableObjectPrompt : MonoBehaviour
     {
         if (playerScript.interactingObject == transform)
         {
+            visible = true;
             prompt.gameObject.SetActive(true);
         }
         else
         {
+            visible = false;
             prompt.gameObject.SetActive(false);
         }
     }
