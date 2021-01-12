@@ -20,7 +20,11 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = movement.transform.forward * z + movement.transform.right * x;
-
         controller.Move(move * speed * Time.deltaTime);
+        if (transform.position.y != 0.6f)
+        {
+            transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
+        }
+
     }
 }
