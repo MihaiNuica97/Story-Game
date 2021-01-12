@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public bool aggro = false;
     public float aggroRange = 10f;
 
+    int mask = ~(1 << 9);
     RaycastHit hit;
     // public float playerDistance;
     // Start is called before the first frame update
@@ -37,11 +38,15 @@ public class Enemy : MonoBehaviour
         {
             transform.LookAt(player);
         }
+        if (health == 0)
+        {
+            gameObject.SetActive(false);
+        }
 
     }
     private void FixedUpdate()
     {
-        Physics.Raycast(transform.position, (player.transform.position - transform.position), out hit, aggroRange);
+        Physics.Raycast(transform.position, (player.transform.position - transform.position), out hit, aggroRange, mask);
     }
     public void TakeDamage(int damageAmount)
     {

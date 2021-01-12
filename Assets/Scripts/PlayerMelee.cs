@@ -30,7 +30,7 @@ public class PlayerMelee : MonoBehaviour
 
             foreach (GameObject enemy in rangeScript.enemiesInRange.Values)
             {
-                enemy.SendMessage("TakeDamage", 10);
+                enemy.SendMessage("TakeDamage", 50);
             }
         }
     }
