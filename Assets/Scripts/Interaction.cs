@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     CharacterController charCtrl;
-    int layerMask = 1 << 8;
+    int layerMask = (1 << 8);
     public Transform interactingObject = null;
     RaycastHit[] hits;
 
@@ -35,11 +35,11 @@ public class Interaction : MonoBehaviour
             Debug.Log("Interacted with: " + interactingObject.name);
             interactingObject.SendMessage("Interact");
         }
+
     }
     private void FixedUpdate()
     {
         Vector3 p1 = transform.position;
-
         hits = Physics.SphereCastAll(p1, 2, transform.forward, 1, layerMask);
     }
     private Transform findNearest(RaycastHit[] hits)
