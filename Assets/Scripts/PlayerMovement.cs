@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour
     CharacterController controller;
     public float speed = 12f;
     public GameObject movement;
+    float initialElevation;
     // Start is called before the first frame update
     void Start()
     {
+        initialElevation = transform.position.y;
         controller = gameObject.GetComponent<CharacterController>();
     }
 
@@ -21,10 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = movement.transform.forward * z + movement.transform.right * x;
         controller.Move(move * speed * Time.deltaTime);
-        if (transform.position.y != 0.6f)
+
+        if (transform.position.y != initialElevation)
         {
             transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            controller.Move(move * speed * Time.deltaTime * 20f);
 
+        }
     }
 }

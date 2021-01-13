@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1197185379379986701}
   - component: {fileID: 1197185379379986690}
   m_Layer: 9
-  m_Name: Enemy
-  m_TagString: Untagged
+  m_Name: Melee Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  swordType: {fileID: 7316905449218604138, guid: 337476583226bee43b6e3cec522bfc43,
+    type: 3}
   aggro: 0
   aggroRange: 10
+  speed: 5
+  attackRange: 2
+  hitCooldown: 1
+  hitInitiated: 0
 --- !u!143 &1197185379379986690
 CharacterController:
   m_ObjectHideFlags: 0
