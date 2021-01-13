@@ -6,6 +6,7 @@ using System.Linq;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public int health = 100;
     // only cast sphere against enemies
     int layerMask = (1 << 9);
     RaycastHit[] hits;
@@ -24,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
 
 
 
+
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +40,10 @@ public class PlayerCombat : MonoBehaviour
             hitInitiated = true;
             StartCoroutine(InitiateCooldown());
             rangedAttack();
+        }
+        if (health == 0)
+        {
+            Destroy(this.gameObject);
         }
     }
     void meleeAttack()
@@ -58,6 +64,14 @@ public class PlayerCombat : MonoBehaviour
         Instantiate(arrowType, spawnPoint, transform.rotation);
     }
 
+    void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            health = 0;
+        }
+    }
     IEnumerator InitiateCooldown()
     {
         yield return new WaitForSeconds(hitCooldown);

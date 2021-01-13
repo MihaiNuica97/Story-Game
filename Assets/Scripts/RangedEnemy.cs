@@ -29,7 +29,7 @@ public class RangedEnemy : MonoBehaviour
     {
         initialElevation = transform.position.y;
 
-        health = 100;
+        // health = 100;
         player = GameObject.Find("Player").transform;
         characterController = gameObject.GetComponent<CharacterController>();
     }
