@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4661683006429263879
 Transform:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 779905025}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,6 +388,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9969e3c3f22536444941792e3154acbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowType: {fileID: 8196325608554071802, guid: 3605c3e950356324c891e27f5be7b403,
+    type: 3}
+  swordType: {fileID: 7316905449218604138, guid: 869ff78398e6b7945b65ada03d8bbad3,
+    type: 3}
   hitInitiated: 0
-  hitCooldown: 1
+  hitCooldown: 0.2
   rangeScript: {fileID: 1207070036}

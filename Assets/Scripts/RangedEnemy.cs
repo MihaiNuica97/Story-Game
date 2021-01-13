@@ -21,10 +21,14 @@ public class RangedEnemy : MonoBehaviour
     int mask = ~(1 << 9);
     float playerDistance;
     RaycastHit hit;
+    float initialElevation;
+
     // public float playerDistance;
     // Start is called before the first frame update
     void Start()
     {
+        initialElevation = transform.position.y;
+
         health = 100;
         player = GameObject.Find("Player").transform;
         characterController = gameObject.GetComponent<CharacterController>();
@@ -33,6 +37,7 @@ public class RangedEnemy : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+
         playerDistance = Vector3.Distance(transform.position, player.transform.position);
         // if player is within engage distance, check if he is within aggro distance and in view
         if (hit.transform != null)
@@ -46,7 +51,7 @@ public class RangedEnemy : MonoBehaviour
             transform.LookAt(player);
             if (playerDistance >= attackRange)
             {
-                transform.Translate(transform.forward * Time.deltaTime * speed, Space.World);
+                characterController.Move(transform.forward * Time.deltaTime * speed);
             }
             else
             {
@@ -63,7 +68,10 @@ public class RangedEnemy : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-
+        if (transform.position.y != initialElevation)
+        {
+            transform.position = new Vector3(transform.position.x, initialElevation, transform.position.z);
+        }
 
     }
 

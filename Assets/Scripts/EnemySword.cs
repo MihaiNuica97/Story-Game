@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwingingSword : MonoBehaviour
+public class EnemySword : MonoBehaviour
 {
     public float movementSpeed = 9f;
     public float rotationSpeed = 250f;
@@ -25,14 +25,13 @@ public class SwingingSword : MonoBehaviour
         initialOrientation = transform.forward;
         initialPosition = transform.position;
         initialRotation = transform.rotation;
-        Destroy(gameObject, 0.3f);
-
     }
     private void OnTriggerEnter(Collider other)
     {
-        // if (!alreadyTriggered)
-        // {
-        other.gameObject.SendMessage("TakeDamage", damage);
+        if (other.tag != "Enemy")
+        {
+            other.gameObject.SendMessage("TakeDamage", damage);
+        }
         // alreadyTriggered = true;
         // }
     }
@@ -40,18 +39,18 @@ public class SwingingSword : MonoBehaviour
     void Update()
     {
         float angle = Vector3.Angle(transform.forward, initialOrientation);
-        // if (angle < arcDegrees)
-        // {
-        transform.Rotate(rotation * (rotationSpeed * Time.deltaTime), Space.World);
-        transform.Translate(-transform.right * Time.deltaTime * movementSpeed, Space.World);
-        // }
-        // else
-        // {
-        // transform.position = initialPosition;
-        // transform.rotation = initialRotation;
-        // Destroy(this.gameObject);
+        if (angle < arcDegrees)
+        {
+            transform.Rotate(rotation * (rotationSpeed * Time.deltaTime), Space.World);
+            transform.Translate(-transform.right * Time.deltaTime * movementSpeed, Space.World);
+        }
+        else
+        {
+            // transform.position = initialPosition;
+            // transform.rotation = initialRotation;
+            Destroy(this.gameObject);
 
-        // }
+        }
 
     }
 }
