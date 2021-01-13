@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class MeleeEnemy : MonoBehaviour
 {
     Transform player;
     public int health;
@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float aggroRange = 10f;
 
     int mask = ~(1 << 9);
+    float playerDistance;
     RaycastHit hit;
     // public float playerDistance;
     // Start is called before the first frame update
@@ -24,9 +25,9 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
-        float playerDistance = Vector3.Distance(transform.position, player.transform.position);
+        playerDistance = Vector3.Distance(transform.position, player.transform.position);
         // if player is within engage distance, check if he is within aggro distance and in view
         if (hit.transform != null)
         {
