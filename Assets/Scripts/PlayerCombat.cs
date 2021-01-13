@@ -12,8 +12,10 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField]
     GameObject arrowType;
+    [SerializeField]
+    GameObject swordType;
 
-
+    GameObject heldSword;
     public bool hitInitiated = false;
 
     public float hitCooldown = 0.5f;
@@ -40,10 +42,14 @@ public class PlayerCombat : MonoBehaviour
     }
     void meleeAttack()
     {
-        foreach (GameObject enemy in rangeScript.enemiesInRange.Values)
+        if (heldSword == null)
         {
-            enemy.SendMessage("TakeDamage", 50);
+            Vector3 spawnPoint = transform.position + transform.forward * 1 + transform.right * 1;
+            heldSword = Instantiate(swordType, spawnPoint, transform.rotation);
+            heldSword.transform.Rotate(0, 45, 0, Space.World);
+            heldSword.transform.parent = transform;
         }
+
     }
 
     void rangedAttack()
