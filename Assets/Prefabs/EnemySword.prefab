@@ -109,4 +109,4 @@ MonoBehaviour:
   movementSpeed: 9
   rotationSpeed: 250
   arcDegrees: 90
-  damage: 50
+  damage: 15

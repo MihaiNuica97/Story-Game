@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086a2dbe7b66fba4c9c47b225a6f9f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 20
   swordType: {fileID: 7316905449218604138, guid: 337476583226bee43b6e3cec522bfc43,
     type: 3}
   aggro: 0

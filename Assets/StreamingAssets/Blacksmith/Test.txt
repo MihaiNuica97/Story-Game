@@ -1,0 +1,10 @@
+{lockplayer}
+{completeQuest}
+Yo new phone who dis?
+Oh you got dem skeleton bones?
+{startquest: The Return, Go back to the Shady Dude,1}
+{enableUpgrade: Player, Armor}
+Nice! have this!
+{releaseplayer}
+{changeScript: NPC, choice}
+{changeScript: done}

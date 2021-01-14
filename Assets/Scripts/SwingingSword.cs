@@ -12,6 +12,7 @@ public class SwingingSword : MonoBehaviour
 
     public int damage = 50;
 
+    public float strikeDuration = 0.3f;
     bool alreadyTriggered = false;
 
     Vector3 initialOrientation;
@@ -25,14 +26,15 @@ public class SwingingSword : MonoBehaviour
         initialOrientation = transform.forward;
         initialPosition = transform.position;
         initialRotation = transform.rotation;
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, strikeDuration);
 
     }
     private void OnTriggerEnter(Collider other)
     {
         // if (!alreadyTriggered)
         // {
-        other.gameObject.SendMessage("TakeDamage", damage);
+        if (other.tag != "Player")
+            other.gameObject.SendMessage("TakeDamage", damage);
         // alreadyTriggered = true;
         // }
     }

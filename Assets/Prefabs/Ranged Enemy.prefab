@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13525b97cfcf7f34f80763c4b06313d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   arrowType: {fileID: 8196325608554071802, guid: 3605c3e950356324c891e27f5be7b403,
     type: 3}
   aggro: 0

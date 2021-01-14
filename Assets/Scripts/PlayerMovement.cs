@@ -8,29 +8,53 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public GameObject movement;
     float initialElevation;
+    public bool movementLocked = false;
+    Dictionary<string, bool> upgrades;
     // Start is called before the first frame update
     void Start()
     {
         initialElevation = transform.position.y;
         controller = gameObject.GetComponent<CharacterController>();
     }
+    private void Awake()
+    {
+        upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
+
+    }
+    public void LockMovement()
+    {
+        movementLocked = true;
+    }
+    public void ReleaseMovement()
+    {
+        movementLocked = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = movement.transform.forward * z + movement.transform.right * x;
-        controller.Move(move * speed * Time.deltaTime);
-
-        if (transform.position.y != initialElevation)
+        if (upgrades == null)
         {
-            transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
+            upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (!movementLocked)
         {
-            controller.Move(move * speed * Time.deltaTime * 20f);
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 move = movement.transform.forward * z + movement.transform.right * x;
+            controller.Move(move * speed * Time.deltaTime);
+
+            if (transform.position.y != initialElevation)
+            {
+                transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
+            }
+            bool dashEnabled = false;
+            upgrades.TryGetValue("Dash", out dashEnabled);
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashEnabled)
+            {
+                controller.Move(move * speed * Time.deltaTime * 20f);
+            }
 
         }
     }

@@ -22,14 +22,17 @@ public class RangedEnemy : MonoBehaviour
     float playerDistance;
     RaycastHit hit;
     float initialElevation;
+    QuestLog questLog;
+
 
     // public float playerDistance;
     // Start is called before the first frame update
     void Start()
     {
         initialElevation = transform.position.y;
+        questLog = GameObject.Find("Quest Tracker").GetComponent<QuestLog>();
 
-        health = 100;
+        // health = 100;
         player = GameObject.Find("Player").transform;
         characterController = gameObject.GetComponent<CharacterController>();
     }
@@ -66,6 +69,8 @@ public class RangedEnemy : MonoBehaviour
 
         if (health == 0)
         {
+            questLog.ProgressCurrentQuest();
+
             gameObject.SetActive(false);
         }
         if (transform.position.y != initialElevation)

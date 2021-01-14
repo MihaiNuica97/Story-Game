@@ -1,3 +1,8 @@
-<b>Culpa</b> voluptate eiusmod commodo irure aliquip eu.
-Ullamco commodo anim ad labore voluptate.
-Ullamco fugiat nulla ex laboris nisi et eiusmod sit dolor laborum et veniam do nisi.
+{lockplayer}
+Here's a test quest.
+{startquest: Test, Kill 6 enemies, 6, questComplete}
+Go and kill 6 enemies for me!
+{releaseplayer}
+{changeScript: questInprogress}
+
+sug pula pe bani!

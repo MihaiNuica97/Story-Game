@@ -24,14 +24,16 @@ public class MeleeEnemy : MonoBehaviour
     public bool hitInitiated = false;
     float initialElevation;
 
+    QuestLog questLog;
     RaycastHit hit;
     // public float playerDistance;
     // Start is called before the first frame update
     void Start()
     {
+        questLog = GameObject.Find("Quest Tracker").GetComponent<QuestLog>();
         initialElevation = transform.position.y;
 
-        health = 100;
+        // health = 100;
         player = GameObject.Find("Player").transform;
         characterController = gameObject.GetComponent<CharacterController>();
     }
@@ -66,6 +68,7 @@ public class MeleeEnemy : MonoBehaviour
         }
         if (health == 0)
         {
+            questLog.ProgressCurrentQuest();
             gameObject.SetActive(false);
         }
         if (transform.position.y != initialElevation)

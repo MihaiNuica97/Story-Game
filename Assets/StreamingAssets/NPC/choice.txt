@@ -1,0 +1,3 @@
+Oh! I see you brought the artifact!
+Well then, hand it over and we can start helping you!
+{choice: TestChoice}
