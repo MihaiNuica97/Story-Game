@@ -36,6 +36,7 @@ public class ScriptParser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        commands = gameObject.GetComponent<CommandsManager>();
         dialogue = gameObject.GetComponent<DialogueSystem>();
     }
 
@@ -50,8 +51,8 @@ public class ScriptParser : MonoBehaviour
         scriptName = newScript;
         reader = new StreamReader(path);
 
-        readNextLine();
-        parseLine(currentLine);
+        // readNextLine();
+        // parseLine(currentLine);
         scriptChanged = false;
     }
 
@@ -77,7 +78,7 @@ public class ScriptParser : MonoBehaviour
         // if the dialogue is still being written out just skip to the end of the line
         {
             dialogue.StopSpeaking();
-            dialogue.speechText.text = dialogue.targetSpeech;
+            dialogue.speechText.text = currentLine;
         }
 
     }
@@ -118,7 +119,9 @@ public class ScriptParser : MonoBehaviour
         {
             // Debug.Log(line);
             char[] tagChars = { '[', ']', ' ' };
-            string expression = line.Trim(tagChars);
+            string commandStr = line.Trim(tagChars);
+
+
             readNextLine();
             parseLine(currentLine);
             return;
@@ -140,11 +143,11 @@ public class ScriptParser : MonoBehaviour
                 commandWords.RemoveAt(0);
                 ArrayList args = new ArrayList(commandWords[0].ToString().Split(','));
 
-                // commands.handleWithArgs(command.ToLower(), args);
+                commands.handleWithArgs(command.ToLower(), args);
             }
             else
             {
-                // commands.handleWithArgs(command.ToLower(), null);
+                commands.handleWithArgs(command.ToLower(), null);
             }
             if (scriptChanged)
             {

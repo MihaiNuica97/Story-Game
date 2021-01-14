@@ -7,6 +7,7 @@ public class Interaction : MonoBehaviour
     CharacterController charCtrl;
     int layerMask = (1 << 8);
     public Transform interactingObject = null;
+
     RaycastHit[] hits;
 
 

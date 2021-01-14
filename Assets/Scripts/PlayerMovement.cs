@@ -8,30 +8,41 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public GameObject movement;
     float initialElevation;
+    public bool movementLocked = false;
     // Start is called before the first frame update
     void Start()
     {
         initialElevation = transform.position.y;
         controller = gameObject.GetComponent<CharacterController>();
     }
+    public void LockMovement()
+    {
+        movementLocked = true;
+    }
+    public void ReleaseMovement()
+    {
+        movementLocked = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = movement.transform.forward * z + movement.transform.right * x;
-        controller.Move(move * speed * Time.deltaTime);
-
-        if (transform.position.y != initialElevation)
+        if (!movementLocked)
         {
-            transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            controller.Move(move * speed * Time.deltaTime * 20f);
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
+            Vector3 move = movement.transform.forward * z + movement.transform.right * x;
+            controller.Move(move * speed * Time.deltaTime);
+
+            if (transform.position.y != initialElevation)
+            {
+                transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
+            }
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                controller.Move(move * speed * Time.deltaTime * 20f);
+            }
         }
     }
 }
