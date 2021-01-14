@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class QuestLog : MonoBehaviour
 {
+    public Dictionary<string, bool> questStatus;
+    public Dictionary<string, bool> upgrades;
     Quest currentQuest;
 
     public string currentQuestTitle;
@@ -19,6 +21,12 @@ public class QuestLog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        questStatus = new Dictionary<string, bool>();
+        upgrades = new Dictionary<string, bool>();
+        upgrades.Add("Dash", false);
+        upgrades.Add("Armor", false);
+        upgrades.Add("Greatsword", false);
+        upgrades.Add("Longbow", false);
         titleText = GameObject.Find("Title").GetComponent<Text>();
         descriptionText = GameObject.Find("Description").GetComponent<Text>();
         progressText = GameObject.Find("Progress").GetComponent<Text>();
@@ -36,6 +44,13 @@ public class QuestLog : MonoBehaviour
             {
                 Debug.Log("Completed quest: " + currentQuest.title);
                 completionParser.changeScriptFile(completionScript);
+                bool currentQuestStatus;
+                questStatus.TryGetValue(currentQuest.title, out currentQuestStatus);
+                if (!currentQuestStatus)
+                {
+                    questStatus[currentQuest.title] = true;
+                }
+
             }
         }
         else
@@ -46,13 +61,21 @@ public class QuestLog : MonoBehaviour
         }
     }
 
+    public void CompleteQuest()
+    {
+        currentQuest.progress = currentQuest.goal;
+    }
     public void StartQuest(string title, string description, int goal, ScriptParser completionParser, string completionScript)
     {
         currentQuest = new Quest(title, description, goal);
-        this.completionParser = completionParser;
-        this.completionScript = completionScript;
+        if (completionScript != null)
+        {
+            this.completionParser = completionParser;
+            this.completionScript = completionScript;
+        }
         titleText.text = title;
         descriptionText.text = description;
+        questStatus.Add(title, false);
     }
 
     public void ProgressCurrentQuest()
@@ -88,4 +111,13 @@ public class QuestLog : MonoBehaviour
         }
     }
 
+    // Upgrades
+    public void EnableUpgrade(string upgrade)
+    {
+        upgrades[upgrade] = true;
+    }
+    public void DisableUpgrade(string upgrade)
+    {
+        upgrades[upgrade] = false;
+    }
 }

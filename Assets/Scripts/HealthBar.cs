@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
 
     Image bar;
     PlayerCombat playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,14 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetRight(bar.rectTransform, (100 - playerScript.health));
+        if (playerScript.upgrades["Armor"])
+        {
+            SetRight(bar.rectTransform, (100 - (playerScript.health) / 2));
+        }
+        else
+        {
+            SetRight(bar.rectTransform, (100 - playerScript.health));
+        }
     }
     public static void SetRight(RectTransform rt, float right)
     {

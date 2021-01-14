@@ -11,10 +11,12 @@ public class CommandsManager : MonoBehaviour
     QuestLog questLog;
 
     ScriptParser parser;
+    GameObject choicesPanel;
 
     GameObject player;
     void Start()
     {
+        choicesPanel = GameObject.Find("Choices");
         player = GameObject.Find("Player");
         parser = gameObject.GetComponent<ScriptParser>();
         questLog = GameObject.Find("Quest Tracker").GetComponent<QuestLog>();
@@ -48,17 +50,46 @@ public class CommandsManager : MonoBehaviour
                 break;
 
             case "startquest":
-                questLog.StartQuest(sanitizeInput(args[0]), sanitizeInput(args[1]), Int32.Parse(sanitizeInput(args[2])), parser, sanitizeInput(args[3]));
+                if (args.Count == 4)
+                {
+                    questLog.StartQuest(sanitizeInput(args[0]), sanitizeInput(args[1]), Int32.Parse(sanitizeInput(args[2])), parser, sanitizeInput(args[3]));
+                }
+                else
+                {
+                    questLog.StartQuest(sanitizeInput(args[0]), sanitizeInput(args[1]), Int32.Parse(sanitizeInput(args[2])), parser, null);
+
+                }
                 break;
 
             case "changescript":
-                parser.changeScriptFile(sanitizeInput(args[0]));
+                if (args.Count == 1)
+                {
+                    parser.changeScriptFile(sanitizeInput(args[0]));
+                }
+                else
+                {
+                    ScriptParser other = GameObject.Find(sanitizeInput(args[0])).GetComponent<ScriptParser>();
+                    other.changeScriptFile(sanitizeInput(args[1]));
+                }
                 break;
             case "releaseplayer":
                 player.SendMessage("ReleaseMovement");
                 break;
             case "lockplayer":
                 player.SendMessage("LockMovement");
+                break;
+            case "completequest":
+                questLog.CompleteQuest();
+                break;
+            case "enableupgrade":
+                if (sanitizeInput(args[0]) == "Player")
+                {
+                    questLog.upgrades[sanitizeInput(args[1])] = true;
+                }
+                break;
+            case "choice":
+                string choiceName = sanitizeInput(args[0]);
+                choicesPanel.transform.Find(choiceName).gameObject.SetActive(true);
                 break;
 
         }

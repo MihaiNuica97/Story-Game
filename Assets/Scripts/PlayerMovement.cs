@@ -9,11 +9,17 @@ public class PlayerMovement : MonoBehaviour
     public GameObject movement;
     float initialElevation;
     public bool movementLocked = false;
+    Dictionary<string, bool> upgrades;
     // Start is called before the first frame update
     void Start()
     {
         initialElevation = transform.position.y;
         controller = gameObject.GetComponent<CharacterController>();
+    }
+    private void Awake()
+    {
+        upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
+
     }
     public void LockMovement()
     {
@@ -27,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (upgrades == null)
+        {
+            upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
+        }
         if (!movementLocked)
         {
             float x = Input.GetAxis("Horizontal");
@@ -39,10 +49,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
             }
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            bool dashEnabled = false;
+            upgrades.TryGetValue("Dash", out dashEnabled);
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashEnabled)
             {
                 controller.Move(move * speed * Time.deltaTime * 20f);
             }
+
         }
     }
 }
