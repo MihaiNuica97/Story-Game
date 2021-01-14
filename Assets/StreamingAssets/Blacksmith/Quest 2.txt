@@ -1,0 +1,10 @@
+{lockplayer}
+Ah, it's you again! Welcome back!
+What are you looking for today?
+Another <color=lime>artifact</color>?
+For the longest time I've wanted to create a <color=lime>Goblin Armor</color>.
+Bring me <color=lime>10 Goblin Skins</color> and I will create the artifact for you.
+Ah, you've come prepared yet again! Give me a minute to craft this, will you?
+Finally, it's done! Here, try this <color=lime>Goblin Cuirass</color>. While wearing it, you <color=red>have double HP</color>.
+Is there anything else I can help you with today?
+{changeScript: bye}

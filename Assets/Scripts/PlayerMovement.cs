@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Awake()
     {
-        upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
+        // upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
 
     }
     public void LockMovement()
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (upgrades == null)
         {
-            upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
+            // upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
         }
         if (!movementLocked)
         {

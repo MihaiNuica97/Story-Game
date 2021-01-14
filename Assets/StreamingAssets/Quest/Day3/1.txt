@@ -1,0 +1,5 @@
+{lockplayer}
+Hello again!
+We're making great progress with the <color=lime>artifact</color> you have found yesterday.
+I have some more information for you.
+{changeScript: Day3/3}

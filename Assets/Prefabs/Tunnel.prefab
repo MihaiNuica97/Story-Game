@@ -43,7 +43,7 @@ BoxCollider:
   m_GameObject: {fileID: 4961723532866293474}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -112,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 572256769247306981, guid: f44947520b384b5419d49517ac98a06c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 572256769247306981, guid: f44947520b384b5419d49517ac98a06c,
         type: 3}
@@ -124,6 +124,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 5068981782975980061, guid: f44947520b384b5419d49517ac98a06c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787045918161695523, guid: f44947520b384b5419d49517ac98a06c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e13d46a74ca5e924b8d0a79ddaaef95b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f44947520b384b5419d49517ac98a06c, type: 3}
 --- !u!4 &2103760572369083930 stripped
@@ -143,6 +153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758717308413299899, guid: b747f1f682a730c47b866694913b3b67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8451152842304590565, guid: b747f1f682a730c47b866694913b3b67,
         type: 3}
@@ -202,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 8451152842304590565, guid: b747f1f682a730c47b866694913b3b67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b747f1f682a730c47b866694913b3b67, type: 3}
@@ -223,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758717308413299899, guid: b747f1f682a730c47b866694913b3b67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8451152842304590565, guid: b747f1f682a730c47b866694913b3b67,
         type: 3}
@@ -282,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 8451152842304590565, guid: b747f1f682a730c47b866694913b3b67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b747f1f682a730c47b866694913b3b67, type: 3}

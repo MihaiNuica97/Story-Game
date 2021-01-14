@@ -1,0 +1,6 @@
+The <color=lime>Legendary Blacksmith</color> seems to have moved to the dungeon in the <color=lime>East</color> today.
+I hear that he's looking to craft an armor out of <color=lime>10 Goblin Skins</color>.
+Lucky for you, they can also be found in the <color=lime>East Dungeon</color>!
+{startquest: Goblin Cuirass, Obtain 10 Goblin Skins, 10, Day2/completed}
+{releaseplayer}
+{changeScript: Day2/bye}
