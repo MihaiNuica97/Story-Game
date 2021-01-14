@@ -1,0 +1,4 @@
+{lockplayer}
+So you didn't succeed in obtaining an <color=lime>artifact</color> yesterday?
+Don't mind, i have some new information that should put you right back on track to recover your body!
+{changeScript: Day3/3}

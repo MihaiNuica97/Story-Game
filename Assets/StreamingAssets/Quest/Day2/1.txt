@@ -1,0 +1,5 @@
+{lockplayer}
+Good morning!
+Good job on obtaining the first <color=lime>artifact</color> yesterday!
+I have good news for you.
+{changeScript: Day2/3}

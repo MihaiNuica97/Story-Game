@@ -1,0 +1,11 @@
+{lockplayer}
+Welcome, Adventurer!
+I am the <color=lime>Legendary Blacksmith</color>!
+What are you looking for?
+Craft an <color=lime>artifact</color>, you say? Hmm...
+Okay, let's do it! I need <color=lime>10 Skeleton Bones</color>.
+Ah, you came prepared! Alright, let me create the item for you.
+Here, I've made a pair of <color=lime>Bone Boots</color>. When you wear them, you can press <color=red>Left Shift</color> in order to move very fast for a short distance.
+Let me also give you a <color=red>Bow</color>. Now, you can press <color=red>Right Click</color> in order to shoot an arrow.
+Is there anything else I can do for you?
+{changeScript: bye}

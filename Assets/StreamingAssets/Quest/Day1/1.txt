@@ -1,0 +1,19 @@
+{lockplayer}
+Oh? A <color=cyan>spirit</color>?!
+Ah, I apologise for my rudeness, we haven't had a <color=cyan>spirit</color> visiting here in ages.
+What, you don't know how you got here?
+Let me explain a few things.
+This town is called Doria. People get sent here mysteriously all the time.
+In your case, you must've been sent here right as you were dying. That should be the reason you are missing your body.
+What? Recover your body? That should be impossible!
+Wait! I just got an idea. There's a legend that says a human can bring a <color=cyan>spirit</color> back to life by using <color=lime>three artifact items</color>.
+Artifacts were thought to be long lost, but recently I hear rumours that a <color=lime>Legendary Blacksmith</color> set up shop in one of the <color=red>dungeons</color> around the city.
+Creating new artifacts should be no problem for him.
+I can help you, but first I need <color=lime>3 artifacts</color>.
+Start by going to the dungeon in the <color=lime>North</color>.
+{startquest: Rude Awakening, Obtain 10 Skeleton Bones, 10, Day1/completed}
+Obtain <color=lime>10 Skeleton Bones</color> to be used as crafting materials. Then,find the <color=lime>Legendary Blacksmith</color> and ask him to craft you an <color=lime>artifact</color>.
+{releaseplayer}
+{changeScript: Day1/bye}
+
+ 
