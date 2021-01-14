@@ -5,7 +5,8 @@ using UnityEngine;
 public class QuestDoor : MonoBehaviour
 {
     QuestLog log;
-    public string questTitle;
+    public string openQuest;
+    public string closeQuest;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,14 @@ public class QuestDoor : MonoBehaviour
     void Update()
     {
         bool status;
-        log.questStatus.TryGetValue(questTitle, out status);
-        if (status)
-        {
-            gameObject.SetActive(false);
+        bool status2;
+        log.questStatus.TryGetValue(closeQuest, out status2);
+        if (!status2) { 
+        log.questStatus.TryGetValue(openQuest, out status) ;
+            if (status)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }
