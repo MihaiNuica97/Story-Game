@@ -86,12 +86,19 @@ public class CommandsManager : MonoBehaviour
                 {
                     questLog.upgrades[sanitizeInput(args[1])] = true;
                 }
+                else if (sanitizeInput(args[0]) == "Boss")
+                {
+                    questLog.bossUpgrades[sanitizeInput(args[1])] = true;
+                }
                 break;
             case "choice":
                 string choiceName = sanitizeInput(args[0]);
                 choicesPanel.transform.Find(choiceName).gameObject.SetActive(true);
                 break;
-
+            case "bossaggro":
+                Instantiate(Resources.Load<GameObject>("Boss"), transform.position, transform.rotation);
+                this.gameObject.SetActive(false);
+                break;
         }
 
 

@@ -1243,7 +1243,7 @@ PrefabInstance:
     - target: {fileID: 5107151571453549304, guid: 29e5201f1ff23694c9245ccedd56f7ed,
         type: 3}
       propertyPath: scriptName
-      value: 1
+      value: Test
       objectReference: {fileID: 0}
     - target: {fileID: 5107151571453549304, guid: 29e5201f1ff23694c9245ccedd56f7ed,
         type: 3}

@@ -1,8 +1,7 @@
 {lockplayer}
-Here's a test quest.
-{startquest: Test, Kill 6 enemies, 6, questComplete}
-Go and kill 6 enemies for me!
+{enableUpgrade: Player, Dash}
+{enableUpgrade: Player, Armor}
+{enableUpgrade: Player, Greatsword}
+{enableUpgrade: Boss, Dash}
 {releaseplayer}
-{changeScript: questInprogress}
-
-sug pula pe bani!
+{bossAggro}

@@ -7,6 +7,8 @@ public class QuestLog : MonoBehaviour
 {
     public Dictionary<string, bool> questStatus;
     public Dictionary<string, bool> upgrades;
+    public Dictionary<string, bool> bossUpgrades;
+
     Quest currentQuest;
 
     public string currentQuestTitle;
@@ -23,10 +25,16 @@ public class QuestLog : MonoBehaviour
     {
         questStatus = new Dictionary<string, bool>();
         upgrades = new Dictionary<string, bool>();
+        bossUpgrades = new Dictionary<string, bool>();
+
         upgrades.Add("Dash", false);
         upgrades.Add("Armor", false);
         upgrades.Add("Greatsword", false);
         upgrades.Add("Longbow", false);
+        bossUpgrades.Add("Dash", false);
+        bossUpgrades.Add("Armor", false);
+        bossUpgrades.Add("Greatsword", false);
+        bossUpgrades.Add("Longbow", false);
         titleText = GameObject.Find("Title").GetComponent<Text>();
         descriptionText = GameObject.Find("Description").GetComponent<Text>();
         progressText = GameObject.Find("Progress").GetComponent<Text>();
