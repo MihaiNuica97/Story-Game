@@ -1,8 +1,13 @@
 {lockplayer}
+{completeQuest}
 Oh? You found me yet again.
+{startquest: Weapon Upgrade, Obtain the third artifact,1}
 I assume you're here for another <color=lime>artifact</color>
 I'm about to leave the area for a while, so I'll make you one more <color=lime>artifact</color>.
 All I need is <color=lime>10 Sharp Bones</color>. 
 I will make a weapon that <color=red>doubles your damage</color>.
-What would you prefer I make, a <color=lime>Greatsword</color> or a <color=lime>Greatbow</color>?
+{completeQuest}
+{startQuest: Body recovery, Return to the strange man in town, 1}
+{enableUpgrade: Player, Greatsword}
+What would you prefer I make, a <color=lime>Greatsword</color> or a <color=lime>Longbow</color>?
 {changeScript: bye}
