@@ -88,7 +88,7 @@ public class PlayerCombat : MonoBehaviour
         }
         if (health == 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
     void meleeAttack()
