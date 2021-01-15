@@ -82,7 +82,7 @@ public class RangedEnemy : MonoBehaviour
 
     void attack()
     {
-        Vector3 spawnPoint = transform.position + transform.forward * 1;
+        Vector3 spawnPoint = transform.position + transform.forward * 2;
         Instantiate(arrowType, spawnPoint, transform.rotation);
     }
     IEnumerator InitiateCooldown()

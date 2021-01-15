@@ -2,6 +2,7 @@
 {enableUpgrade: Player, Dash}
 {enableUpgrade: Player, Armor}
 {enableUpgrade: Player, Greatsword}
+{enableUpgrade: Player, Longbow}
 {enableUpgrade: Boss, Dash}
 {releaseplayer}
 {bossAggro}
