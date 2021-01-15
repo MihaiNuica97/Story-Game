@@ -92,8 +92,8 @@ public class QuestLog : MonoBehaviour
     {
         if (currentQuest != null)
         {
-
-            currentQuest.Progress();
+            if (currentQuest.goal > 1)
+                currentQuest.Progress();
         }
     }
 
