@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject movement;
     float initialElevation;
     public bool movementLocked = false;
+    public float dashCooldown = 2f;
+    bool dashInitiated = false;
     Dictionary<string, bool> upgrades;
     // Start is called before the first frame update
     void Start()
@@ -51,11 +53,20 @@ public class PlayerMovement : MonoBehaviour
             }
             bool dashEnabled = false;
             upgrades.TryGetValue("Dash", out dashEnabled);
-            if (Input.GetKeyDown(KeyCode.LeftShift) && dashEnabled)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashEnabled && !dashInitiated)
             {
+                dashInitiated = true;
                 controller.Move(move * speed * Time.deltaTime * 20f);
+                StartCoroutine(InitiateCooldown());
             }
 
         }
+    }
+
+    IEnumerator InitiateCooldown()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+        dashInitiated = false;
+        // Code to execute after the delay
     }
 }
