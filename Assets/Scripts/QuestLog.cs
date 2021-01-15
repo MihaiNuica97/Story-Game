@@ -43,7 +43,7 @@ public class QuestLog : MonoBehaviour
             if (currentQuest.goal == currentQuest.progress)
             {
                 Debug.Log("Completed quest: " + currentQuest.title);
-                completionParser.changeScriptFile(completionScript);
+                if (completionScript!=null) completionParser.changeScriptFile(completionScript);
                 bool currentQuestStatus;
                 questStatus.TryGetValue(currentQuest.title, out currentQuestStatus);
                 if (!currentQuestStatus)
