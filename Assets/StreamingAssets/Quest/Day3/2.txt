@@ -1,4 +1,4 @@
 {lockplayer}
-So you didn't succeed in obtaining an <color=lime>artifact</color> yesterday?
+So you didn't succeed in obtaining an <color=lime>artifact</color> in the <color=lime>East Dungeon</color>?
 Don't mind, i have some new information that should put you right back on track to recover your body!
 {changeScript: Day3/3}

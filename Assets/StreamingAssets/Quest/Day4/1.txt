@@ -1,0 +1,12 @@
+Okay, it's time we talk about this.
+I asked my men to follow you into the dungeon.
+I know you've met the <color=lime>Legendary Blacksmith</color>!
+I know he crafted <color=lime>3 artifacts</color> for you!
+I have to say, I'm really disappointed with you.
+You didn't trust me enough with the artifacts once you found them.
+You hid them from me.
+Well, I guess that's only fair, since I hid something from you too.
+There is no method to bring a <color=blue>spirit</color> back to its original body.
+I wanted to use you to bring me the <color=lime>artifacts</color>...
+Pity, I would've spared you if you gave me the <color=lime>artifacts earlier!</color>
+{bossAggro}

@@ -1,0 +1,5 @@
+Wise choice!
+Alright, here's your weapon!
+{releaseplayer}
+{startQuest: Third Time's a Charm, Return to the strange man in town, 1}
+{changeScript: bye}

@@ -1,0 +1,6 @@
+It's truly unfortunate the <color=lime>Legendary Blacksmith</color> is leaving town..
+Well, you've done good work so far!
+Unfortunately, I asked my men to follow you.
+They saw you obtain all of the <color=lime>artifacts</color> in the <color=lime>Legendary Blacksmith</color>'s chambers.
+Sorry, I can't bring your body back, but I can take all the <color=lime>artifacts</color> for myself!
+{bossAggro}

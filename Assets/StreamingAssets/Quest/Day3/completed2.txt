@@ -1,0 +1,2 @@
+Welcome back! Have you obtained the <color=lime>weapon</color>?
+{choice: Longbow}
