@@ -5,4 +5,5 @@ Too bad, though..I never intended to help you with your body!
 You even believed me that <color=lime>artifacts</color> could help you!
 There's nothing to recover. I'll make it easy for you, though.
 DIE!
+{releaseplayer}
 {bossAggro}

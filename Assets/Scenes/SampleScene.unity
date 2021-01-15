@@ -384,6 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ae31b4f156d5b4bb2458c818fc9676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeCount: 0
   currentQuestTitle: 
   currentQuestDescription: 
   currentQuestProgress: 0
@@ -1576,50 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 779905025, guid: 3203511f494c3bb42896c01f5a534e52, type: 3}
-      propertyPath: swordType
-      value: 
-      objectReference: {fileID: 7316905449218604138, guid: 869ff78398e6b7945b65ada03d8bbad3,
-        type: 3}
-    - target: {fileID: 779905025, guid: 3203511f494c3bb42896c01f5a534e52, type: 3}
-      propertyPath: arrowType
-      value: 
-      objectReference: {fileID: 8196325608554071802, guid: 3605c3e950356324c891e27f5be7b403,
-        type: 3}
-    - target: {fileID: 779905025, guid: 3203511f494c3bb42896c01f5a534e52, type: 3}
-      propertyPath: upgradedSword
-      value: 
-      objectReference: {fileID: 7316905449218604138, guid: d03493bdb9430524b919ea50569cbb27,
-        type: 3}
-    - target: {fileID: 779905025, guid: 3203511f494c3bb42896c01f5a534e52, type: 3}
-      propertyPath: upgradedArrow
-      value: 
-      objectReference: {fileID: 8196325608554071802, guid: 0900412dd6a10cb4997d52370914d07d,
-        type: 3}
-    - target: {fileID: 8342971413240055697, guid: 3203511f494c3bb42896c01f5a534e52,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9031820077479457809, guid: 3203511f494c3bb42896c01f5a534e52,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9031820078825247650, guid: 3203511f494c3bb42896c01f5a534e52,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9031820078825247650, guid: 3203511f494c3bb42896c01f5a534e52,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9031820078825247651, guid: 3203511f494c3bb42896c01f5a534e52,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9031820078825247652, guid: 3203511f494c3bb42896c01f5a534e52,
         type: 3}

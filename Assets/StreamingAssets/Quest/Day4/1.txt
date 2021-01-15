@@ -9,4 +9,5 @@ Well, I guess that's only fair, since I hid something from you too.
 There is no method to bring a <color=blue>spirit</color> back to its original body.
 I wanted to use you to bring me the <color=lime>artifacts</color>...
 Pity, I would've spared you if you gave me the <color=lime>artifacts earlier!</color>
+{releaseplayer}
 {bossAggro}

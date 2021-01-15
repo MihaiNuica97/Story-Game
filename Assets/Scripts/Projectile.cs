@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     public float speed = 10f;
     public int damage = 50;
     bool alreadyTriggered = false;
+
+    public bool damagePlayer = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,16 @@ public class Projectile : MonoBehaviour
     {
         if (!alreadyTriggered)
         {
-            other.gameObject.SendMessage("TakeDamage", damage);
-            alreadyTriggered = true;
+            if (!damagePlayer && other.tag == "Player")
+            {
+
+            }
+            else
+            {
+                other.gameObject.SendMessage("TakeDamage", damage);
+                alreadyTriggered = true;
+            }
+
         }
         Destroy(this.gameObject);
     }

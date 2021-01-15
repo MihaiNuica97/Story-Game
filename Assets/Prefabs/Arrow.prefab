@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 10
+  damagePlayer: 1
 --- !u!54 &8196325608554071804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50a2457a4e6e34726805bc233f01b387, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.10000229
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50a2457a4e6e34726805bc233f01b387, type: 3}
       propertyPath: m_LocalPosition.y
@@ -183,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50a2457a4e6e34726805bc233f01b387, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6249
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50a2457a4e6e34726805bc233f01b387, type: 3}
       propertyPath: m_LocalScale.y

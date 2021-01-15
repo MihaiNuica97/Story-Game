@@ -13,8 +13,10 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField]
     GameObject arrowType;
+    GameObject normalArrow;
     [SerializeField]
     GameObject swordType;
+    GameObject normalSword;
     [SerializeField]
     GameObject upgradedSword;
     [SerializeField]
@@ -31,7 +33,8 @@ public class PlayerCombat : MonoBehaviour
     private void Start()
     {
         upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
-
+        normalArrow = arrowType;
+        normalSword = swordType;
     }
 
 
@@ -46,9 +49,17 @@ public class PlayerCombat : MonoBehaviour
         {
             swordType = upgradedSword;
         }
+        else
+        {
+            swordType = normalSword;
+        }
         if (upgrades["Longbow"] && arrowType.name != "Longbow Arrow")
         {
             arrowType = upgradedArrow;
+        }
+        else
+        {
+            arrowType = normalArrow;
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && !hitInitiated)
         {
@@ -76,7 +87,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (heldSword == null)
         {
-            Vector3 spawnPoint = transform.position + transform.forward * 1 + transform.right * 1;
+            Vector3 spawnPoint = transform.position + transform.forward * 2 + transform.right * 1;
             if (swordType.name == "Greatsword")
             {
                 spawnPoint = transform.position + transform.forward * 1.5f + transform.right * 1;
@@ -93,7 +104,8 @@ public class PlayerCombat : MonoBehaviour
     void rangedAttack()
     {
         Vector3 spawnPoint = transform.position + transform.forward * 1;
-        Instantiate(arrowType, spawnPoint, transform.rotation);
+        GameObject arrow = Instantiate(arrowType, spawnPoint, transform.rotation);
+        arrow.GetComponent<Projectile>().damagePlayer = false;
     }
 
     void TakeDamage(int damageAmount)
