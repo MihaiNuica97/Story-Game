@@ -7,6 +7,7 @@ using System.Linq;
 public class PlayerCombat : MonoBehaviour
 {
     public int health = 100;
+    public int maxHP = 100;
     // only cast sphere against enemies
     int layerMask = (1 << 9);
     RaycastHit[] hits;
@@ -31,7 +32,7 @@ public class PlayerCombat : MonoBehaviour
     private void Start()
     {
         upgrades = GameObject.Find("Quest Tracker").GetComponent<QuestLog>().upgrades;
-
+        health = maxHP;
     }
 
 
@@ -65,7 +66,13 @@ public class PlayerCombat : MonoBehaviour
         if (!healthAlreadyUpgraded && upgrades["Armor"])
         {
             health *= 2;
+            maxHP *= 2;
             healthAlreadyUpgraded = true;
+        }
+        if (healthAlreadyUpgraded && !upgrades["Armor"])
+        {
+            health /= 2;
+            maxHP /= 2;
         }
         if (health == 0)
         {
@@ -109,5 +116,10 @@ public class PlayerCombat : MonoBehaviour
         yield return new WaitForSeconds(hitCooldown);
         hitInitiated = false;
         // Code to execute after the delay
+    }
+
+    public void regenHP()
+    {
+        health = maxHP;
     }
 }

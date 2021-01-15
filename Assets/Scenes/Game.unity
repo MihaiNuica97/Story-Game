@@ -351,6 +351,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 56489160}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &62022185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 779905025, guid: 3203511f494c3bb42896c01f5a534e52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418240315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9969e3c3f22536444941792e3154acbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &62022193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9031820078825247654, guid: 3203511f494c3bb42896c01f5a534e52,
@@ -4038,6 +4050,17 @@ MonoBehaviour:
           m_StringArgument: Dash
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &518791147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5581,6 +5604,17 @@ MonoBehaviour:
           m_StringArgument: Longbow
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &716498153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6017,6 +6051,17 @@ MonoBehaviour:
       - m_Target: {fileID: 66138848}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6481,6 +6526,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Armor
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &796633316
@@ -7711,6 +7767,17 @@ MonoBehaviour:
           m_StringArgument: Greatsword
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &957750992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7994,6 +8061,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1429772315}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11617,6 +11695,17 @@ MonoBehaviour:
       - m_Target: {fileID: 821145509}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16357,6 +16446,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1860235049}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 62022185}
+        m_MethodName: regenHP
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
