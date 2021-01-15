@@ -57,7 +57,6 @@ public class CommandsManager : MonoBehaviour
                 else
                 {
                     questLog.StartQuest(sanitizeInput(args[0]), sanitizeInput(args[1]), Int32.Parse(sanitizeInput(args[2])), parser, null);
-
                 }
                 break;
 
