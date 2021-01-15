@@ -83,8 +83,8 @@ public class PlayerCombat : MonoBehaviour
         }
         if (healthAlreadyUpgraded && !upgrades["Armor"])
         {
-            health /= 2;
-            maxHP /= 2;
+            health = 100;
+            maxHP = 100;
         }
         if (health == 0)
         {

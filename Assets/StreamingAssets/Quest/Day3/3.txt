@@ -1,7 +1,8 @@
 My men just found the <color=lime>Legendary Blacksmith</color> in the <color=lime>West Dungeon</color> .
 They haven't managed to speak to him, but I know he always wanted to create a weapon.
-I believe this means he must be looking for <color=lime>10 Sharp Bones</color>.
+I believe this means he must be looking for <color=lime>10 Metal Pieces</color>.
+Lucky for you, all of the monsters in the <color=lime>West Dungeon</color> have one <color=lime>Metal Piece</color>.
 You should go to the <color=lime>West Dungeon</color> and obtain a weapon.
-{startquest: Bone Weaponry, Obtain 10 Sharp Bones, 10}
+{startquest: Metal Weaponry, Obtain 10 Metal Pieces, 10}
 {releaseplayer}
 {changeScript: Day3/bye}

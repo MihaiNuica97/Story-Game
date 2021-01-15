@@ -12,6 +12,11 @@ Artifacts were thought to be long lost, but recently I hear rumours that a <colo
 {completeQuest}
 Creating new artifacts should be no problem for him.
 I can help you, but first I need <color=lime>3 artifacts</color>.
+I will give you a <color=red>sword</color> and a <color=red>bow</color>.
+To move, press <color=red>W,A,S,D to move Up,Left,Down,Right</color>.
+To attack with your sword, press <color=red>Left Click</color>.
+To shoot your bow, press <color=red>Right Click</color>.
+As you might already know, press <color=red>E to interact</color>.
 Start by going to the dungeon in the <color=lime>North</color>.
 {startquest: Rude Awakening, Obtain 10 Skeleton Bones, 10}
 Obtain <color=lime>10 Skeleton Bones</color> to be used as crafting materials. Then,find the <color=lime>Legendary Blacksmith</color> and ask him to craft you an <color=lime>artifact</color>.

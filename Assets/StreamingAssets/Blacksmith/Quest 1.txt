@@ -12,6 +12,5 @@ Ah, you came prepared! Alright, let me create the item for you.
 {enableUpgrade: Player, Dash}
 {changeScript: Quest,Day1/completed}
 Here, I've made a pair of <color=lime>Bone Boots</color>. When you wear them, you can press <color=red>Left Shift</color> in order to move very fast for a short distance.
-Let me also give you a <color=red>Bow</color>. Now, you can press <color=red>Right Click</color> in order to shoot an arrow.
 Is there anything else I can do for you?
 {changeScript: bye}
