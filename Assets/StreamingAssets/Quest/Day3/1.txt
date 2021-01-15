@@ -1,5 +1,5 @@
 {lockplayer}
 Hello again!
-We're making great progress with the <color=lime>artifact</color> you have found yesterday.
+We're making great progress with the <color=lime>artifact</color> you have found in the <color=lime>East Dungeon</color>
 I have some more information for you.
 {changeScript: Day3/3}

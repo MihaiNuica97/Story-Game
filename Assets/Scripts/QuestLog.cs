@@ -8,6 +8,7 @@ public class QuestLog : MonoBehaviour
     public Dictionary<string, bool> questStatus;
     public Dictionary<string, bool> upgrades;
     public Dictionary<string, bool> bossUpgrades;
+    public int upgradeCount;
 
     Quest currentQuest;
 
@@ -27,6 +28,7 @@ public class QuestLog : MonoBehaviour
         upgrades = new Dictionary<string, bool>();
         bossUpgrades = new Dictionary<string, bool>();
 
+        upgradeCount = 0;
         upgrades.Add("Dash", false);
         upgrades.Add("Armor", false);
         upgrades.Add("Greatsword", false);
@@ -123,9 +125,23 @@ public class QuestLog : MonoBehaviour
     public void EnableUpgrade(string upgrade)
     {
         upgrades[upgrade] = true;
+        upgradeCount++;
     }
     public void DisableUpgrade(string upgrade)
     {
         upgrades[upgrade] = false;
+        upgradeCount--;
+    }
+    public void BossUpgrade(string upgrade)
+    {
+        bossUpgrades[upgrade] = true;
+    }
+
+    //Final script change
+    public void FinalScript()
+    {
+        if (upgradeCount == 0) GameObject.Find("Quest").GetComponent<ScriptParser>().changeScriptFile("Day4/3");
+        else if (upgradeCount < 3) GameObject.Find("Quest").GetComponent<ScriptParser>().changeScriptFile("Day4/2");
+        else if (upgradeCount == 3) GameObject.Find("Quest").GetComponent<ScriptParser>().changeScriptFile("Day4/1");
     }
 }

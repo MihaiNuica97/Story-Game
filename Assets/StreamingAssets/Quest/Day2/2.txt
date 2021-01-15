@@ -1,5 +1,5 @@
 {lockplayer}
-Good morning!
-You don't have to worry about yesterday, there are <color=olive>adventurers</color> that search for an <color=lime>artifact</color> their entire lives!
+You don't have to worry about this, it was only your first try.
+There are <color=olive>adventurers</color> that search for an <color=lime>artifact</color> their entire lives!
 My men have found another lead for you to follow.
 {changeScript: Day2/3}

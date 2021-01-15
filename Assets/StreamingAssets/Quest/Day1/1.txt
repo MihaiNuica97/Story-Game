@@ -13,7 +13,7 @@ Artifacts were thought to be long lost, but recently I hear rumours that a <colo
 Creating new artifacts should be no problem for him.
 I can help you, but first I need <color=lime>3 artifacts</color>.
 Start by going to the dungeon in the <color=lime>North</color>.
-{startquest: Rude Awakening, Obtain 10 Skeleton Bones, 10, Day1/completed}
+{startquest: Rude Awakening, Obtain 10 Skeleton Bones, 10}
 Obtain <color=lime>10 Skeleton Bones</color> to be used as crafting materials. Then,find the <color=lime>Legendary Blacksmith</color> and ask him to craft you an <color=lime>artifact</color>.
 {releaseplayer}
 {changeScript: Day1/bye}

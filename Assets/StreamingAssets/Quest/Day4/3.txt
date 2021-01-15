@@ -1,0 +1,8 @@
+Well done, <color=blue>spirit</color>!
+You managed to obtain <color=lime>3 artifacts</color> in such a short time!
+You must be extremely lucky, surely somebody out there wants you to recover your body.
+Too bad, though..I never intended to help you with your body!
+You even believed me that <color=lime>artifacts</color> could help you!
+There's nothing to recover. I'll make it easy for you, though.
+DIE!
+{bossAggro}
